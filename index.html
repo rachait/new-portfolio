@@ -2868,10 +2868,15 @@ function handleSubmit(event) {
 
 /* ─── RESUME DOWNLOAD ─── */
 function downloadResume() {
-  // Replace with your actual resume PDF URL
-  const resumeUrl = 'https://drive.google.com/uc?export=download&id=YOUR_GOOGLE_DRIVE_FILE_ID';
-  // For now, prompt user to set up the link
-  alert('📄 To enable resume download:\n1. Upload your PDF to Google Drive\n2. Get the shareable link\n3. Update the resumeUrl variable in app.js');
+  // Resume PDF from Google Drive
+  const resumeUrl = 'https://drive.google.com/uc?export=download&id=1WwNFl9_4jeDf51z_J9gbDBi6CqBrJ1am';
+  // Trigger download
+  const link = document.createElement('a');
+  link.href = resumeUrl;
+  link.download = 'Rachait_Talwar_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 /* ─── NEWSLETTER SIGNUP ─── */
