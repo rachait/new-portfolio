@@ -1,44 +1,90 @@
 <svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg2" x1="120" y1="40" x2="1080" y2="760" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#08111F"/>
-      <stop offset="1" stop-color="#171126"/>
+      <stop stop-color="#071019"/>
+      <stop offset="1" stop-color="#140F25"/>
     </linearGradient>
     <linearGradient id="accent2" x1="300" y1="180" x2="920" y2="620" gradientUnits="userSpaceOnUse">
       <stop stop-color="#00D4AA"/>
-      <stop offset="1" stop-color="#6C63FF"/>
+      <stop offset="0.5" stop-color="#6C63FF"/>
+      <stop offset="1" stop-color="#FFD700"/>
     </linearGradient>
     <linearGradient id="panel2" x1="220" y1="210" x2="980" y2="610" gradientUnits="userSpaceOnUse">
       <stop stop-color="#101422" stop-opacity="0.96"/>
-      <stop offset="1" stop-color="#1C1730" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#1A1630" stop-opacity="0.96"/>
     </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
+
   <rect width="1200" height="800" rx="36" fill="url(#bg2)"/>
-  <circle cx="178" cy="152" r="4" fill="#6C63FF"/>
-  <circle cx="244" cy="120" r="4" fill="#00D4AA"/>
-  <circle cx="992" cy="146" r="4" fill="#FFD700"/>
-  <circle cx="1046" cy="222" r="4" fill="#6C63FF"/>
+  <circle cx="178" cy="152" r="4" fill="#6C63FF" opacity="0.9">
+    <animate attributeName="cy" values="152;140;152" dur="4.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="244" cy="120" r="4" fill="#00D4AA" opacity="0.9">
+    <animate attributeName="cy" values="120;130;120" dur="3.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="992" cy="146" r="4" fill="#FFD700" opacity="0.9">
+    <animate attributeName="cy" values="146;136;146" dur="5.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1046" cy="222" r="4" fill="#6C63FF" opacity="0.9">
+    <animate attributeName="cy" values="222;212;222" dur="4.7s" repeatCount="indefinite"/>
+  </circle>
+
   <rect x="160" y="180" width="880" height="440" rx="30" fill="url(#panel2)" stroke="rgba(255,255,255,0.08)"/>
-  <rect x="210" y="228" width="280" height="180" rx="24" fill="#0D1627" stroke="rgba(0,212,170,0.35)"/>
-  <text x="250" y="276" fill="#00D4AA" font-family="Arial, sans-serif" font-size="22" font-weight="700">Stage 1</text>
-  <text x="250" y="314" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="30" font-weight="700">Intent</text>
-  <text x="250" y="350" fill="#8A92B2" font-family="Arial, sans-serif" font-size="18">Extract appName, entities, roles, features</text>
-  <rect x="510" y="228" width="280" height="180" rx="24" fill="#0F1A2C" stroke="rgba(108,99,255,0.35)"/>
-  <text x="550" y="276" fill="#6C63FF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Stage 3</text>
-  <text x="550" y="314" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="30" font-weight="700">Schemas</text>
-  <text x="550" y="350" fill="#8A92B2" font-family="Arial, sans-serif" font-size="18">UI • API • DB • Auth</text>
-  <rect x="790" y="228" width="200" height="180" rx="24" fill="#0D1627" stroke="rgba(255,215,0,0.28)"/>
-  <text x="830" y="276" fill="#FFD700" font-family="Arial, sans-serif" font-size="22" font-weight="700">Stage 4</text>
-  <text x="830" y="314" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="30" font-weight="700">Refine</text>
-  <text x="830" y="350" fill="#8A92B2" font-family="Arial, sans-serif" font-size="18">Repair & consistency</text>
-  <path d="M490 318H510" stroke="url(#accent2)" stroke-width="8" stroke-linecap="round"/>
-  <path d="M770 318H790" stroke="url(#accent2)" stroke-width="8" stroke-linecap="round"/>
-  <path d="M360 408C404 448 454 472 522 486C610 504 703 490 770 456C822 430 872 396 916 342" stroke="url(#accent2)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="522" cy="486" r="10" fill="#00D4AA"/>
-  <circle cx="770" cy="456" r="10" fill="#6C63FF"/>
-  <circle cx="916" cy="342" r="10" fill="#FFD700"/>
-  <rect x="250" y="500" width="700" height="86" rx="20" fill="#0D1627" stroke="rgba(255,255,255,0.08)"/>
-  <text x="290" y="553" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="26" font-weight="700">Validation + Repair Engine • Runtime Executor Validator • Metrics Tracker</text>
-  <text x="250" y="650" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="34" font-weight="700">AI App Generator</text>
+
+  <rect x="200" y="220" width="800" height="86" rx="22" fill="#0D1627" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="228" y="246" width="132" height="34" rx="17" fill="rgba(0,212,170,0.12)" stroke="rgba(0,212,170,0.3)"/>
+  <text x="294" y="269" text-anchor="middle" fill="#00D4AA" font-family="Arial, sans-serif" font-size="20" font-weight="700">Stage 1</text>
+  <rect x="386" y="246" width="132" height="34" rx="17" fill="rgba(108,99,255,0.12)" stroke="rgba(108,99,255,0.3)"/>
+  <text x="452" y="269" text-anchor="middle" fill="#6C63FF" font-family="Arial, sans-serif" font-size="20" font-weight="700">Stage 2</text>
+  <rect x="544" y="246" width="132" height="34" rx="17" fill="rgba(255,215,0,0.08)" stroke="rgba(255,215,0,0.25)"/>
+  <text x="610" y="269" text-anchor="middle" fill="#FFD700" font-family="Arial, sans-serif" font-size="20" font-weight="700">Stage 3</text>
+  <rect x="702" y="246" width="132" height="34" rx="17" fill="rgba(0,212,170,0.12)" stroke="rgba(0,212,170,0.3)"/>
+  <text x="768" y="269" text-anchor="middle" fill="#00D4AA" font-family="Arial, sans-serif" font-size="20" font-weight="700">Stage 4</text>
+  <rect x="860" y="246" width="110" height="34" rx="17" fill="rgba(108,99,255,0.12)" stroke="rgba(108,99,255,0.3)"/>
+  <text x="915" y="269" text-anchor="middle" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="18" font-weight="700">Repair</text>
+
+  <g filter="url(#glow)">
+    <circle cx="294" cy="395" r="72" fill="rgba(0,212,170,0.08)" stroke="rgba(0,212,170,0.45)" stroke-width="4">
+      <animate attributeName="r" values="72;78;72" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="610" cy="395" r="84" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.4)" stroke-width="4">
+      <animate attributeName="r" values="84;90;84" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="915" cy="395" r="72" fill="rgba(255,215,0,0.07)" stroke="rgba(255,215,0,0.35)" stroke-width="4">
+      <animate attributeName="r" values="72;78;72" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <path d="M366 395H526" stroke="url(#accent2)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M694 395H843" stroke="url(#accent2)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M294 456C350 456 390 418 438 392C482 368 544 372 610 395C674 417 721 452 784 453C846 454 885 423 915 395" stroke="rgba(108,99,255,0.85)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M292 322V270" stroke="rgba(0,212,170,0.7)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M610 310V260" stroke="rgba(108,99,255,0.7)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M915 322V270" stroke="rgba(255,215,0,0.65)" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="294" cy="395" r="14" fill="#00D4AA"/>
+  <circle cx="610" cy="395" r="14" fill="#6C63FF"/>
+  <circle cx="915" cy="395" r="14" fill="#FFD700"/>
+
+  <g>
+    <rect x="224" y="484" width="752" height="82" rx="20" fill="#0D1627" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="270" cy="525" r="8" fill="#00D4AA"/>
+    <rect x="292" y="512" width="148" height="26" rx="13" fill="rgba(0,212,170,0.12)" stroke="rgba(0,212,170,0.3)"/>
+    <text x="366" y="530" text-anchor="middle" fill="#00D4AA" font-family="Arial, sans-serif" font-size="18" font-weight="700">Validation</text>
+    <circle cx="498" cy="525" r="8" fill="#6C63FF"/>
+    <rect x="520" y="512" width="148" height="26" rx="13" fill="rgba(108,99,255,0.12)" stroke="rgba(108,99,255,0.3)"/>
+    <text x="594" y="530" text-anchor="middle" fill="#6C63FF" font-family="Arial, sans-serif" font-size="18" font-weight="700">Runtime Checks</text>
+    <circle cx="726" cy="525" r="8" fill="#FFD700"/>
+    <rect x="748" y="512" width="190" height="26" rx="13" fill="rgba(255,215,0,0.08)" stroke="rgba(255,215,0,0.28)"/>
+    <text x="843" y="530" text-anchor="middle" fill="#FFD700" font-family="Arial, sans-serif" font-size="18" font-weight="700">Metrics Tracking</text>
+  </g>
+
+  <text x="250" y="652" fill="#F0F0F8" font-family="Arial, sans-serif" font-size="34" font-weight="700">AI App Generator</text>
   <text x="250" y="688" fill="#8A92B2" font-family="Arial, sans-serif" font-size="20">Claude AI • Express • /app Runtime • Production-ready compiler</text>
 </svg>
